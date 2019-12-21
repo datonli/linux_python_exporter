@@ -17,13 +17,7 @@ class Reporter():
         self.process_info_list = []
 
     def ClearAll(self):
-        self.cpu_stat_list = []
-        self.mem_stat_list = []
-        self.disk_usage_list = []
-        self.disk_io_list = []
-        self.net_list = []
-        self.net_io_list = []
-        self.process_info_list = []
+        self.__init__()
 
     def CollectCpuStat(self):
         cpu_stat_l = psutil.cpu_percent(interval=1, percpu=True)
